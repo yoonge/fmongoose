@@ -1,9 +1,9 @@
 {{extend 'layout.html'}}
 
 {{block 'content'}}
-<h4>User List</h4>
+<h2>User List</h2>
 <h3 class="text-end">
-  <a class="btn btn-sm btn-dark" href="/users/insert" role="button">Add</a>
+  <a class="btn btn-sm btn-dark" href="/user/insert" role="button">Add</a>
 </h3>
 <table class="table table-bordered table-striped">
   <thead class="table-dark">
@@ -27,8 +27,8 @@
       <td>{{ $value.age }}</td>
       <td>{{ $value.email }}</td>
       <td>
-        <a href="/users/update?_id={{@$value._id}}" class="link-primary">Edit</a>
-        <a href="/users/remove?_id={{@$value._id}}" class="link-danger">Delete</a></td>
+        <a href="/user/update?_id={{@$value._id}}" class="link-primary">Edit</a>
+        <a href="/user/remove?_id={{@$value._id}}" class="link-danger">Delete</a></td>
     </tr>
     {{/each}}
   </tbody>

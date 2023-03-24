@@ -3,8 +3,8 @@ body {
 }
 
 .navbar-brand {
-  font-size: 24px;
+  font-size: 26px;
   margin-right: 36px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
 }

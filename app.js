@@ -12,7 +12,7 @@ import onerror from 'koa-onerror'
 import render from 'koa-art-template'
 
 import index from './routes/index.js'
-import users from './routes/users.js'
+import user from './routes/user.js'
 
 const _dirName = dirname(fileURLToPath(import.meta.url))
 console.log(_dirName)
@@ -52,7 +52,7 @@ app.use(async (ctx, next) => {
 
 // routes
 app.use(index.routes(), index.allowedMethods())
-app.use(users.routes(), users.allowedMethods())
+app.use(user.routes(), user.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

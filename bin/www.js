@@ -5,10 +5,9 @@
  */
 
 import app from '../app.js'
+import http from 'http'
 import debugModule from 'debug'
 const debug = new debugModule('demo:server')
-
-import http from 'http'
 
 /**
  * Normalize a port into a number, string, or false.
