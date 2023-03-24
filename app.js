@@ -1,13 +1,21 @@
-const Koa = require('koa')
+import Koa from 'koa'
 const app = new Koa()
-const views = require('koa-views')
-const json = require('koa-json')
-const onerror = require('koa-onerror')
-const bodyparser = require('koa-bodyparser')
-const logger = require('koa-logger')
 
-const index = require('./routes/index')
-const users = require('./routes/users')
+import path, { dirname } from 'node:path'
+import url, { fileURLToPath  } from 'node:url'
+
+import bodyparser from 'koa-bodyparser'
+import json from 'koa-json'
+import koaStatic from 'koa-static'
+import logger from 'koa-logger'
+import onerror from 'koa-onerror'
+import render from 'koa-art-template'
+
+import index from './routes/index.js'
+import users from './routes/users.js'
+
+const _dirName = dirname(fileURLToPath(import.meta.url))
+console.log(_dirName)
 
 // error handler
 onerror(app)
@@ -18,11 +26,21 @@ app.use(bodyparser({
 }))
 app.use(json())
 app.use(logger())
-app.use(require('koa-static')(__dirname + '/public'))
+app.use(koaStatic(_dirName + '/public'))
 
-app.use(views(__dirname + '/views', {
-  extension: 'pug'
-}))
+// set templates global variable
+app.use(async (ctx, next) => {
+  const { pathname } = url.parse(ctx.request.url)
+  ctx.state.pathname = pathname
+  await next()
+})
+
+// render the template
+render(app, {
+  root: path.join(_dirName, 'views'),
+  extname: '.html',
+  debug: process.env.NODE_ENV !== 'production'
+})
 
 // logger
 app.use(async (ctx, next) => {
@@ -41,4 +59,4 @@ app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
 });
 
-module.exports = app
+export default app
