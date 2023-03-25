@@ -27,8 +27,8 @@
       <td>{{ $value.age }}</td>
       <td>{{ $value.email }}</td>
       <td>
-        <a href="/user/update?_id={{@$value._id}}" class="link-primary">Edit</a>
-        <a href="/user/remove?_id={{@$value._id}}" class="link-danger">Delete</a></td>
+        <a href="/user/update?_id={{@ $value._id }}" class="link-primary">Edit</a>
+        <a href="/user/remove?_id={{@ $value._id }}" class="link-danger">Delete</a></td>
     </tr>
     {{/each}}
   </tbody>

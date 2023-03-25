@@ -38,4 +38,19 @@ router.get('/update', async (ctx, next) => {
   })
 })
 
+router.post('/doUpdate', async (ctx, next) => {
+  const { _id, nickname, username, sex, age, email } = ctx.request.body
+  const item = await UserModel.findByIdAndUpdate(
+    { _id },
+    { $set: { nickname, username, sex, age, email } }
+  )
+  if (item) ctx.redirect('/user')
+})
+
+router.get('/remove', async (ctx, next) => {
+  const { _id } = ctx.query
+  const item = await UserModel.findByIdAndDelete({ _id })
+  if (item) ctx.redirect('/user')
+})
+
 export default router
