@@ -2,6 +2,10 @@ body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .navbar-brand {
   font-size: 26px;
   margin-right: 36px;

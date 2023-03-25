@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "art-template": "^4.13.2",
+    "bootstrap-icons": "^1.10.3",
     "debug": "^4.1.1",
     "koa": "^2.7.0",
     "koa-art-template": "^1.1.1",

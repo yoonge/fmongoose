@@ -1,4 +1,4 @@
-# Mongoose Test
+# Mongoose CURD
 
 ## Quick Start
 

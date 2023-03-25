@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   art-template: ^4.13.2
+  bootstrap-icons: ^1.10.3
   debug: ^4.1.1
   koa: ^2.7.0
   koa-art-template: ^1.1.1
@@ -17,6 +18,7 @@ specifiers:
 
 dependencies:
   art-template: 4.13.2
+  bootstrap-icons: registry.npmmirror.com/bootstrap-icons/1.10.3
   debug: 4.3.4
   koa: 2.14.1
   koa-art-template: 1.1.1_art-template@4.13.2
@@ -2283,6 +2285,12 @@ packages:
       file-uri-to-path: registry.npmmirror.com/file-uri-to-path/1.0.0
     dev: true
     optional: true
+
+  registry.npmmirror.com/bootstrap-icons/1.10.3:
+    resolution: {integrity: sha512-7Qvj0j0idEm/DdX9Q0CpxAnJYqBCFCiUI6qzSPYfERMcokVuV9Mdm/AJiVZI8+Gawe4h/l6zFcOzvV7oXCZArw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/bootstrap-icons/-/bootstrap-icons-1.10.3.tgz}
+    name: bootstrap-icons
+    version: 1.10.3
+    dev: false
 
   registry.npmmirror.com/file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz}

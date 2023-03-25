@@ -1,5 +1,5 @@
 {{block 'head'}}
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="/bootstrap5.2.3/bootstrap.min.css">
 <link rel="stylesheet" href="/stylesheets/style.css">
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 {{/block}}
@@ -11,7 +11,11 @@
 {{block 'header'}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><strong>Mongoose Test</strong></a>
+    <a class="navbar-brand" href="/"><strong>
+      <svg class="bi me-2" width="32" height="32" fill="currentColor" style="vertical-align: -5">
+        <use xlink:href="/images/bootstrap-icons.svg#apple"/>
+      </svg>Mongoose Test
+    </strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,5 +38,5 @@
 </div>
 
 {{block 'footer'}}
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+<script src="/bootstrap5.2.3/bootstrap.bundle.min.js"></script>
 {{/block}}

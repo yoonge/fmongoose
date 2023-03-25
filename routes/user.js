@@ -39,10 +39,10 @@ router.get('/update', async (ctx, next) => {
 })
 
 router.post('/doUpdate', async (ctx, next) => {
-  const { _id, nickname, username, sex, age, email } = ctx.request.body
+  const { _id, nickname, username, gender, age, email } = ctx.request.body
   const item = await UserModel.findByIdAndUpdate(
     { _id },
-    { $set: { nickname, username, sex, age, email } }
+    { $set: { nickname, username, gender, age, email } }
   )
   if (item) ctx.redirect('/user')
 })
